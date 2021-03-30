@@ -2,8 +2,13 @@
 A robot "the chaser" chases another robot "the runner" and tries to catch it.
 
 ## Overview
-A graphical interface is created to visualize the runner and chaser on a map. The runner performs a random walk whereas the chaser intelligently picks its action at every time step based on the runner's current position using a recursive tree search.
-In every simulation, the runner can be placed on any valid point on the map as chosen by user. The simulation ends once the chaser cathces the runner.
+This project comprises of a C based physics simulator to emulate robot movement and collision resolution, path planning using a recursive tree search, and a graphics generator to display the environment. The aim of the program is for a chaser robot to catch the runner robot which performs a random walk in the map environment.
+
+1. **Collision Detection**: Detects if two polygons interset each other based on the cross-product between pairs of points on two different lines of the polygons.
+
+2. **Path Planning**: For the chaser robot to intelligently decide on its next action in order to catch the chaser robot,  it will search its actions over a horizon , 4 time steps into the future. The trajectory of the chaser robot is forward simulated for different possible actions it could take. Then at the end of the simulated trajectory, a score os computed to represent how good of a place the chaser is in relative to the runner. The action with the best score is taken for the next time step.
+
+3. **Graphics**: Implemented code to draw lines, figures, and fill figures.
 
 ## Run the code 
 ```
